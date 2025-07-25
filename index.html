@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الموقع الرسمي black - بلاك</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+    :root {
+      --color-bg: #1a1f2b;
+      --color-primary: #4fd1c5;
+      --color-secondary: #38b2ac;
+      --color-accent: #e53e3e;
+      --color-text: #e2e8f0;
+      --color-text-light: #a0aec0;
+      --color-section-bg: #2d3748;
+      --color-shadow: rgba(79, 209, 197, 0.3);
+    }
+
+    body {
+      margin: 0; padding: 0 0 70px 0; /* padding bottom for footer space */
+      font-family: 'Cairo', sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center;
+      line-height: 1.6;
+    }
+
+    header {
+      margin-top: 40px;
+      text-align: center;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 3.4em;
+      margin-bottom: 0;
+      color: var(--color-primary);
+      text-shadow: 0 0 10px var(--color-primary);
+    }
+
+    header p.subtitle {
+      margin-top: 5px;
+      font-size: 1.4em;
+      font-weight: 600;
+      color: var(--color-secondary);
+      text-shadow: 0 0 6px var(--color-secondary);
+    }
+
+    main {
+      width: 90%;
+      max-width: 900px;
+      margin: 50px 0 80px 0;
+    }
+
+    section {
+      background: var(--color-section-bg);
+      border-radius: 15px;
+      padding: 25px 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 25px var(--color-shadow);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    section h2 {
+      border-bottom: 3px solid var(--color-primary);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: var(--color-primary);
+      font-weight: 700;
+      font-size: 1.8em;
+    }
+
+    .info p {
+      font-size: 1.1em;
+      margin: 8px 0;
+    }
+
+    .info p strong {
+      color: var(--color-accent);
+    }
+
+    .accounts {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .account-group {
+      width: 100%;
+      max-width: 500px;
+      background: #223244;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 15px var(--color-shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .account-group:hover {
+      transform: translateY(-5px);
+    }
+
+    .account-group h3 {
+      color: var(--color-secondary);
+      margin-bottom: 12px;
+      font-size: 1.3em;
+      border-bottom: 2px solid var(--color-secondary);
+      padding-bottom: 6px;
+      text-align: center;
+    }
+
+    .account-group a {
+      display: block;
+      color: var(--color-text);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 8px 0;
+      padding: 10px 14px;
+      border-radius: 6px;
+      background: var(--color-primary);
+      box-shadow: 0 0 8px var(--color-primary);
+      transition: background 0.3s ease;
+      text-align: center;
+    }
+
+    .account-group a:hover {
+      background: var(--color-secondary);
+      box-shadow: 0 0 12px var(--color-secondary);
+    }
+
+    /* الشريط الثابت للحقوق */
+    footer.sticky-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #111;
+      color: var(--color-text-light);
+      text-align: center;
+      font-size: 14px;
+      padding: 10px 0;
+      border-top: 1px solid var(--color-primary);
+      box-shadow: 0 -3px 8px rgba(79, 209, 197, 0.3);
+      z-index: 1000;
+      user-select: none;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 2.4em;
+      }
+      section {
+        padding: 20px 15px;
+      }
+      .account-group {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>black - بلاك</h1>
+  <p class="subtitle">صانع مودات ماين كرافت ومهتم بالمحتوى الإبداعي</p>
+</header>
+
+<main>
+  <section class="info" aria-label="معلوماتي">
+    <h2>معلوماتي</h2>
+    <p><strong>الاسم:</strong> فضل</p>
+    <p><strong>اللقب:</strong> black</p>
+    <p><strong>المهنة:</strong> صانع مودات</p>
+    <p><strong>المحتوى:</strong> ماين كرافت</p>
+  </section>
+
+  <section aria-label="حساباتي وروابطي">
+    <h2>حساباتي وروابطي</h2>
+    <div class="accounts">
+
+      <div class="account-group" aria-label="قناة تيليجرام">
+        <h3>📢 قناة تيليجرام</h3>
+        <a href="https://t.me/maineer2" target="_blank" rel="noopener">@maineer2</a>
+      </div>
+
+      <div class="account-group" aria-label="بوتات">
+        <h3>🤖 البوتات</h3>
+        <a href="https://t.me/modsblack_bot" target="_blank" rel="noopener">@modsblack_bot</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="sticky-footer">
+  <footer class="sticky-footer">
+  <p>
+    جميع الحقوق محفوظة
+    <a href="https://t.me/maineer2" target="_blank" rel="noopener" class="neon-link">بلاك - @maineer2</a>
+  </p>
+  <p>
+    تم صناعة الموقع بالكامل
+    <a href="https://t.me/T_90q" target="_blank" rel="noopener" class="neon-link">@T_90q</a>
+  </p>
+</footer>
+
+<style>
+  .neon-link {
+    color: #fff;
+    text-decoration: none;
+    text-shadow:
+      0 0 5px #00fff7,
+      0 0 10px #00fff7,
+      0 0 20px #00fff7,
+      0 0 40px #00fff7;
+    transition: color 0.3s ease;
+  }
+  .neon-link:hover {
+    color: #0ff;
+    text-shadow:
+      0 0 10px #00fff7,
+      0 0 20px #00fff7,
+      0 0 30px #00fff7,
+      0 0 50px #00fff7;
+  }
+</style>
+
+</footer>
+
+</body>
+</html>
